@@ -124,6 +124,11 @@ class _UserFeedPageState extends State<UserFeedPage> {
               ],
             );
           }),
+        ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {},
+          backgroundColor: Colors.blue,
+          child: const Icon(Icons.edit),
         ));
   }
 }
