@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:suku/user_feed/user_feed_page.dart';
+import 'package:logger/logger.dart';
+import 'package:suku/messages/messages_page.dart';
+import 'package:suku/notification/notification_page.dart';
+import 'package:suku/search/search_page.dart';
+import 'package:suku/home/user_feed_page.dart';
 
+var logger = Logger();
 void main() {
   runApp(const MyApp());
 }
@@ -42,16 +47,16 @@ class _MyHomePageState extends State<MyHomePage> {
 
   var pages = [
     const UserFeedPage(),
-    //   SearchPage(),
-    //   NotificationPage(),
-    //   MessagesPage(),
+    const SearchPage(),
+    const NotificationPage(),
+    const MessagesPage(),
   ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // body: pages(selectedPageIndex),
-      body: pages[0],
+      body: pages[selectedPageIndex],
+      // body: pages[0],
       bottomNavigationBar: BottomNavigationBar(
         onTap: (index) {
           setState(() {

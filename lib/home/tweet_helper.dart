@@ -1,4 +1,4 @@
-import 'package:suku/user_feed/tweet_item_model.dart';
+import 'package:suku/home/tweet_item_model.dart';
 
 class TweetHelper {
   static var tweets = [
