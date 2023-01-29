@@ -1,7 +1,7 @@
 class TweetItemModel {
   String tweet;
   String username;
-  String time;
+  int time;
   String twitterHandle;
 
   TweetItemModel(
